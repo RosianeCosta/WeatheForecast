@@ -1,0 +1,29 @@
+Aplicação Web utilizando Tecnologia API RESTful com o ASP.NET Core 2 e Entity Framework Core 2
+Foi escolhida essa tecnologia pois dessa forma é possível executar a API em plataforma linux e windows.
+Com a implentação da API para fazer gestão dos dados, o código pode ser reaproveitado, podendo ser utilizado por
+vários tipos de aplicação (mobile, web...)
+
+A API é responsável por gerenciar os dados(lista de cidades favoritas) que serão inseridos no banco, selecionados, atualizados ou deletados;
+
+Separei em camadas para dividir melhor as responsábilidades:
+- Domain: Responsável pela implementação de classes, regras de negócio e validações
+- Repository: Responsável por perssistir os dados no banco
+
+O Aplicativo foi construido utilizando Xamarin por ser uma ferramenta que cria aplicações multiplataforma(android e ios).
+
+Utilizo a metodologia MVVM, que tem sido bastante utilizada em arquiteruras para desenvolvimento mobile.
+
+No Projeto Weather dentro da pasta Requests, ficam as requisições que o sistema efetuará para as APIs.
+O Aquivo RequestWaetherApi é uma classe estatica pois assim poderia ser utilizada para fazer a chamada no momento desejado. Assim como o 
+arquivo RequestOpenWeatherMapApi.
+Não foi possível importar o nuget Newtonsoft.Json, ainda não identifiquei o problema, demandaria um pouco mais de tempo pois envolve pesquisa.
+por isso não consegui fazer o deserealize do objeto de retorno da requisição.
+
+Utilizei o AutoMapper pois facilita realizar a copia de um objeto para outro.
+
+Se tivesse mais tempo tentaria armazenar os dados na memória interna do aplicativo, acredito ser mais 
+rápido e viável do que o uso de uma api. Estudaria sobre arquitetura mobile para entender
+qual a melhor forma de organizar os dados para esse cenário, com certeza esse documento *COMMENTS seria bem mais detalhado
+e teria finalizado todas as implementações necessárias para o bom funcionamento do aplicativo.
+
+
